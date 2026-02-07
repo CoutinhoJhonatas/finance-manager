@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: finance-manager-api
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/billing_db
+    username: billing_user
+    password: billing_pass
+    river-class-name: org.postgresql.Drive
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  sql:
+    init:
+      mode: never
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
