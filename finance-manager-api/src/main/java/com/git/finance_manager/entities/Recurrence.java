@@ -28,6 +28,12 @@ public class Recurrence {
     private Integer quantityInMonths;
     private LocalDateTime createdAt;
 
-    @OneToMany(mappedBy = "recurrenceId")
+    @OneToMany(mappedBy = "recurrence")
     private List<Billing> billings = new ArrayList<>();
+
+    public Recurrence (String description, Integer quantityInMonths) {
+        this.description = description;
+        this.quantityInMonths = quantityInMonths;
+        this.createdAt = LocalDateTime.now();
+    }
 }

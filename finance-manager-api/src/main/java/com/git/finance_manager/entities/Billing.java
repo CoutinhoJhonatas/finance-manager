@@ -51,6 +51,6 @@ public class Billing {
 
     @ManyToOne
     @JoinColumn(name = "recurrence_id")
-    private Recurrence recurrenceId;
+    private Recurrence recurrence;
 
 }
